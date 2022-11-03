@@ -6,9 +6,14 @@ fn div(x: i32, y: i32) -> i32{
     x / y
 }
 
-#[test]
-fn div_test() {
-    assert_eq!(div(10,3), 3);
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn div_test() {
+        assert_eq!(div(10,3), 3);
+    }
 }
 
 #[test]
